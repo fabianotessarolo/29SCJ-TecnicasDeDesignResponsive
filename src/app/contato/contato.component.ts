@@ -65,7 +65,7 @@ export class ContatoComponent implements OnInit {
       let headers = new Headers (
         { 'Content-Type': 'application/json'});
       let options = new RequestOptions( {headers : headers});
-      this.http.post('api/contato',
+      this.http.post('/api/contato',
         JSON.stringify(this.contatoForm.value), options)
         .map(this.mapeiaResultado)
         .subscribe(recent => {

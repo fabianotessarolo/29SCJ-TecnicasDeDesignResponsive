@@ -9,7 +9,7 @@
         <div *ngFor="let err of listaErros;">
         <div class="alert alert-danger">{{err.texto}}</div>
         </div>
-        <div *nfFor="let err of listaResultado;">
+        <div *ngFor="let err of listaResultado;">
           <div [ngClass]="{'alert-success' : err.sucesso, 'alert-danger': !err.sucesso}"
           class="alert">{{err.texto}} </div> 
         </div>    
