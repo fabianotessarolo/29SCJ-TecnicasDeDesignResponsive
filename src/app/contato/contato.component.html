@@ -6,6 +6,13 @@
         <p class="card-text">
           Lorem ipsum bla blabla bla
         </p>
+        <div *ngFor="let err of listaErros;">
+        <div class="alert alert-danger">{{err.texto}}</div>
+        </div>
+        <div *nfFor="let err of listaResultado;">
+          <div [ngClass]="{'alert-success' : err.sucesso, 'alert-danger': !err.sucesso}"
+          class="alert">{{err.texto}} </div> 
+        </div>    
         <form [formGroup]="contatoForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <input type="text" class="form-control" formControlName="nome" placeholder="Seu Nome" required/>
