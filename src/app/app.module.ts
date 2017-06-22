@@ -4,11 +4,15 @@ import { HttpModule} from '@angular/http';
 import { AppComponent } from './app.component';
 import { ContatoComponent } from './contato/contato.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { ArtigoComponent } from './artigo/artigo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContatoComponent
+    ContatoComponent,
+    HomeComponent,
+    ArtigoComponent
   ],
   imports: [
     BrowserModule,

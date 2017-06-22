@@ -8,11 +8,9 @@
         </div>
 
         <nav class="navbar navbar-inverse navbar-toggleable-sm" id="menu-links">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-           data-target="#menu-links-interno">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#menu-links-interno">
               <span class="navbar-toggler-icon"></span>
           </button>
-
           <a class="navbar-brand hidden-md-up" href="#">menu</a>
           <div class="navbar-collapse collapse" id="menu-links-interno">
             <div class="navbar-nav">
@@ -22,49 +20,24 @@
             </div>
           </div>
         </nav>
-
-
       </header>
     </div>
 
     <div class="col-md-8 offset-md-4" id="conteudo">
-      <div class="col-md-12">
-        <article id="sobre-mim" class="row">
-          <h1>Sobre Mim</h1>
-          <div>
-            Lorem ipsum dolor sit amet, in solet efficiendi sea, cu nonumy invenire qui. Utinam possit voluptua cu usu. Id velit assum ludus mea, ius ea iisque viderer admodum. Et sea libris officiis electram. Cibo suscipit ius ad, in pro wisi soleat, cu nec erant delectus patrioque. Apeiri
-          </div>
-        </article>
-      </div>
-
       <section id="artigos" class="row">
-        <div class="col-md-6">
-          <div class="p-3"></div>        
-          <article class="card artigo">  
+        <div class="col-md-6" *ngFor="let artigo of artigos;">
+          <div class="p-3"></div>
+          <article class="card artigo">
             <div class="card-block">
-              <h2 class="card-title">Artigo 1</h2>
-              <p class="card-text"> 
-                Lorem ipsum dolor sit amet, in solet efficiendi sea, cu nonumy invenire qui. Utinam possit voluptua cu usu. Id velit assum ludus mea, ius ea iisque viderer admodum. Et sea libris officiis electram. Cibo suscipit ius ad, in pro wisi soleat, cu nec erant delectus patrioque. Apeiri
+              <h2 class="card-title">{{artigo.titulo}}</h2>
+              <p class="card-text">
+                {{artigo.resumo}}
               </p>
-            <button class="btn btn-primary">ler mais</button> 
-            </div>                 
+              <button class="btn btn-primary" [routerLink]="['/artigo', artigo.id]" />ler mais</button>
+            </div>
           </article>
-        </div>
-        <div class="col-md-6">
-          <div class="p-3"></div>        
-          <article class="card artigo">  
-            <div class="card-block">
-              <h2 class="card-title">Artigo 2</h2>
-              <p class="card-text"> 
-                Lorem ipsum dolor sit amet, in solet efficiendi sea, cu nonumy invenire qui. Utinam possit voluptua cu usu. Id velit assum ludus mea, ius ea iisque viderer admodum. Et sea libris officiis electram. Cibo suscipit ius ad, in pro wisi soleat, cu nec erant delectus patrioque. Apeiri
-              </p>
-            <button class="btn btn-primary">ler mais</button> 
-            </div>                 
-          </article> 
-        </div>
+        </div>        
       </section>
-
       <app-contato></app-contato>
-
     </div>
-</div>
+  </div>
