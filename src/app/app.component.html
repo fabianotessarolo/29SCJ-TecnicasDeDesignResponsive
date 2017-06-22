@@ -24,20 +24,7 @@
     </div>
 
     <div class="col-md-8 offset-md-4" id="conteudo">
-      <section id="artigos" class="row">
-        <div class="col-md-6" *ngFor="let artigo of artigos;">
-          <div class="p-3"></div>
-          <article class="card artigo">
-            <div class="card-block">
-              <h2 class="card-title">{{artigo.titulo}}</h2>
-              <p class="card-text">
-                {{artigo.resumo}}
-              </p>
-              <button class="btn btn-primary" [routerLink]="['/artigo', artigo.id]" />ler mais</button>
-            </div>
-          </article>
-        </div>        
-      </section>
+      <router-outlet></router-outlet>
       <app-contato></app-contato>
     </div>
   </div>

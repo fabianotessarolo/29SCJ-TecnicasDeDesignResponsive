@@ -6,6 +6,8 @@ import { ContatoComponent } from './contato/contato.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { ArtigoComponent } from './artigo/artigo.component';
+import { RouterModule } from '@angular/router';
+import { routes } from './router';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import { ArtigoComponent } from './artigo/artigo.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
