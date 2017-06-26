@@ -5,7 +5,7 @@ import { HomeComponent } from 'app/home/home.component';
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     {
-        path: 'artigo/id',
+        path: 'artigo/:id',
         component: ArtigoComponent
     }
 ];
